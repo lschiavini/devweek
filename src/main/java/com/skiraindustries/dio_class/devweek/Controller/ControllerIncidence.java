@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api")
 public class ControllerIncidence {
     private final IncidenceRepo repository;
 
@@ -22,9 +23,9 @@ public class ControllerIncidence {
     public ResponseEntity<?> findAll() {
         try {
             List<Incidence> list = repository.findAll();
-            if(list.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
+//            if(list.isEmpty()) {
+//                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//            }
             return new ResponseEntity<>(list, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
