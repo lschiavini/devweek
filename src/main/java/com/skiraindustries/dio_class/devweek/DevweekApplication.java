@@ -1,3 +1,5 @@
+package com.skiraindustries.dio_class.devweek;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
