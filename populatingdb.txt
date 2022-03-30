@@ -1,0 +1,34 @@
+
+CREATE TABLE region (id INT auto_increment PRIMARY KEY, region varchar(20), qty_exams int );
+CREATE TABLE age_group (id INT auto_increment PRIMARY KEY, age_groupi int, age_groupn int, description varchar (50));
+CREATE TABLE incidence (id INT auto_increment PRIMARY KEY, region_id int, month int, age_groupid int, qty_exams int);
+
+Alter table incidence add constraint fk_incidence foreign key (region_id) references region (id);
+Alter table incidence add constraint fk_age_group foreign key (age_groupid) references age_group (id);
+
+INSERT INTO region (region, qty_exams) VALUES ('Norte','44');
+INSERT INTO region (region, qty_exams) VALUES ('Nordeste','13832');
+INSERT INTO region (region, qty_exams) VALUES ('Sudeste','89657');
+INSERT INTO region (region, qty_exams) VALUES ('Sul','122');
+INSERT INTO region (region, qty_exams) VALUES ('Centro-Oeste','2581');
+
+
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('0','10','Até 10 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('11','14','Entre 11 e 14 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('15','19','Entre 15 e 19 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('20','24','Entre 20 e 24 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('25','29','Entre 25 e 29 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('30','34','Entre 30 e 34 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('35','39','Entre 35 e 39 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('40','44','Entre 40 e 44 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('45','49','Entre 45 e 49 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('50','54','Entre 50 e 54 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('55','59','Entre 55 e 59 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('60','64','Entre 60 e 64 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('65','69','Entre 65 e 69 anos');
+INSERT INTO age_group (age_groupi,age_groupn,description) VALUES ('70','150','Acima de 70');
+
+
+INSERT INTO incidence (region_id, month, age_groupid, qty_exams) VALUES (1,5,2,1);
+INSERT INTO incidence (region_id, month, age_groupid, qty_exams) VALUES (1,5,4,2);
+

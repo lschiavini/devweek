@@ -8,17 +8,17 @@ public class Incidence {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long id;
-    private Integer regionId;
+    private Integer region_id;
     private Integer month;
-    private Long ageGroupId;
-    private Integer qtyExams;
+    private Long age_groupid;
+    private Integer qty_exams;
 
-    public Incidence(Long id, Integer regionId, Integer month, Long ageGroupId, Integer qtyExams) {
+    public Incidence(Long id, Integer region_id, Integer month, Long age_groupid, Integer qty_exams) {
         this.id = id;
-        this.regionId = regionId;
+        this.region_id = region_id;
         this.month = month;
-        this.ageGroupId = ageGroupId;
-        this.qtyExams = qtyExams;
+        this.age_groupid = age_groupid;
+        this.qty_exams = qty_exams;
     }
 
     public Incidence() {
@@ -29,11 +29,11 @@ public class Incidence {
     }
 
     public Integer getRegionId() {
-        return regionId;
+        return region_id;
     }
 
-    public void setRegionId(Integer regionId) {
-        this.regionId = regionId;
+    public void setRegionId(Integer region_id) {
+        this.region_id = region_id;
     }
 
     public Integer getMonth() {
@@ -45,18 +45,18 @@ public class Incidence {
     }
 
     public Long getAgeGroupId() {
-        return ageGroupId;
+        return age_groupid;
     }
 
-    public void setAgeGroupId(Long ageGroupId) {
-        this.ageGroupId = ageGroupId;
+    public void setAgeGroupId(Long age_groupid) {
+        this.age_groupid = age_groupid;
     }
 
     public Integer getQtyExams() {
-        return qtyExams;
+        return qty_exams;
     }
 
-    public void setQtyExams(Integer qtyExams) {
-        this.qtyExams = qtyExams;
+    public void setQtyExams(Integer qty_exams) {
+        this.qty_exams = qty_exams;
     }
 }

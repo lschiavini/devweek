@@ -8,14 +8,14 @@ public class AgeGroup {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id;
-    private Long ageGroupI;
-    private Long ageGroupN;
+    private Long age_groupi;
+    private Long age_groupn;
     private String description;
 
-    public AgeGroup(Long id, Long ageGroupI, Long ageGroupN, String description) {
+    public AgeGroup(Long id, Long age_groupi, Long age_groupn, String description) {
         this.id = id;
-        this.ageGroupI = ageGroupI;
-        this.ageGroupN = ageGroupN;
+        this.age_groupi = age_groupi;
+        this.age_groupn = age_groupn;
         this.description = description;
     }
 
@@ -26,19 +26,19 @@ public class AgeGroup {
     }
 
     public Long getAgeGroupI() {
-        return ageGroupI;
+        return age_groupi;
     }
 
-    public void setAgeGroupI(Long ageGroupI) {
-        this.ageGroupI = ageGroupI;
+    public void setAgeGroupI(Long age_groupi) {
+        this.age_groupi = age_groupi;
     }
 
     public Long getAgeGroupN() {
-        return ageGroupN;
+        return age_groupn;
     }
 
-    public void setAgeGroupN(Long ageGroupN) {
-        this.ageGroupN = ageGroupN;
+    public void setAgeGroupN(Long age_groupn) {
+        this.age_groupn = age_groupn;
     }
 
     public String getDescription() {

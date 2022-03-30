@@ -1,0 +1,14 @@
+CREATE USER 'user'@localhost IDENTIFIED BY 'Luc@s2022';
+GRANT ALL PRIVILEGES ON *.* TO 'java'@localhost;
+
+CREATE DATABASE dbcancerdemama;
+SHOW DATABASES;
+USE dbcancerdemama();
+
+CREATE TABLE region (id INT auto_increment PRIMARY KEY, region varchar(20), qty_exams int );
+CREATE TABLE age_group (id INT auto_increment PRIMARY KEY, age_groupi int, age_groupn int, description varchar (50));
+CREATE TABLE incidence (id INT auto_increment PRIMARY KEY, region_id int, month int, age_groupid int, qty_exams int);
+
+Alter table incidence add constraint fk_incidence foreign key (region_id) references region (id);
+Alter table incidence add constraint fk_age_group foreign key (age_groupid) references age_group (id);
+
